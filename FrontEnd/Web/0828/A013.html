@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯繫我們</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+    
+    <!-- 引入自定義 CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- 引入 jQuery (更新版本) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- 引入 Bootstrap Bundle (包含 Popper) -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <style>
+        .card-container {
+            display: flex;
+            align-items: center;
+            background-color: #e6f9e6; /* 淺綠色底色 */
+            padding: 1rem; /* 添加一些內邊距 */
+            border-radius: 8px; /* 圓角邊框 (可選) */
+        }
+        .card-img {
+            width: 50%;
+            height: auto;
+        }
+        .card-body {
+            width: 50%;
+            padding-left: 1rem;
+        }
+        footer {
+            background-color: #f8f9fa;
+            padding: 10px 0;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <!-- 載入 navbar -->
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+    </script>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                <div class="card-container">
+                    <img src="images/施作方式.jpg" class="card-img" alt="施作方式">
+                    <div class="card-body">
+                        <h5 class="card-title">施作方式</h5>
+                        <hr class="my-3" style="border: none; height: 4px; background-color: #36fa05;">
+                        <p class="card-text">土壤準備：酪梨樹喜歡排水良好的土壤。龍哥會建議進行土壤測試，確保土壤pH值在6到7之間。根據土壤狀況進行改良，例如添加有機肥料來增加土壤的肥力和結構。</p>
+                            <p class="card-text">正確施肥：酪梨樹需要均衡的養分供應。龍哥會根據植物的生長階段調整施肥計劃。通常，酪梨樹在生長季節需要氮、磷、鉀等營養素，並定期施用有機肥料以改善土壤的健康。</p>
+                            <p class="card-text">適當的灌溉：酪梨樹對水分的需求較高，但根部不耐積水。龍哥建議使用滴灌系統，以確保水分均勻分布並避免過度灌溉。</p>
+                            <p class="card-text">病蟲害管理：龍哥會定期檢查樹木，預防常見的病蟲害如蚜蟲、真菌感染等。他會採取綜合病蟲害管理策略，包括生物防治和合理使用農藥。</p>
+                            <p class="card-text">修剪與管理：適當的修剪可以促進樹木的健康生長和提高果實的品質。龍哥會根據樹木的生長狀況進行修剪，去除病枝和過密的枝條，保持良好的通風和光照。</p>
+                            <p class="card-text">收穫時機：酪梨的成熟與品種、氣候以及果實的大小有關。龍哥會觀察果實的顏色和硬度，以確定最佳的收穫時機。通常，酪梨會在樹上成熟一段時間，這段時間的長短取決於品種。</p>
+                            <p class="card-text">後期處理：收穫後，龍哥會妥善處理果實，以確保其品質。他會將果實儲存在適當的條件下，例如通風良好的地方或低溫環境，以延長保鮮期。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; ★龍★職人農作 | 所有權利保留 | <a href="A06.html" title="隱私政策">隱私政策</a></p>
+    </footer>
+</body>
+</html>

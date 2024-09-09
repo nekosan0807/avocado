@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>酪梨</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    
+    <!-- 引入自定義 CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- 引入 jQuery (更新版本) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    
+    <!-- 引入 Bootstrap Bundle (包含 Popper) -->
+    <script src="./js/bootstrap.bundle.min.js" defer></script>
+    <link rel="stylesheet" href="styles.css"> <!-- 新的樣式文件 -->
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <!-- 載入 navbar -->
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+    </script>
+    <div class="container">
+        <h1>芒果</h1>
+        <div class="row">
+            <!-- 商品項目開始 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="images/夏雪01.jpg" class="card-img-top" alt="夏雪">
+                    <div class="card-body">
+                        <div class="product-table">
+                            <table>
+                                <tr>
+                                    <th>品名</th>
+                                    <td>夏雪</td>
+                                </tr>
+                                <tr>
+                                    <th>價格</th>
+                                    <td>$50/公斤</td>
+                                </tr>
+                                <tr>
+                                    <th>規格</th>
+                                    <td>每個約 200 克</td>
+                                </tr>
+                                <tr>
+                                    <th>庫存狀況</th>
+                                    <td>現貨充足</td>
+                                </tr>
+                                <tr>
+                                    <th>保存方法</th>
+                                    <td>請放置於陰涼乾燥處，避免陽光直射。</td>
+                                </tr>
+                                <tr>
+                                    <th>運送信息</th>
+                                    <td>配送範圍：全台灣；配送方式：宅配；配送時間：1-3 個工作日內。</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="order-form">
+                            <form action="/submit-order" method="post" aria-labelledby="order-form">
+                                <input type="number" name="quantity" min="1" max="10" value="1" aria-label="選擇數量">
+                                <button type="submit" class="btn-custom">立即訂購</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 重複商品區塊 -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="images/芒果西施.jpg" class="card-img-top" alt="西施">
+                    <div class="card-body">
+                        <div class="product-table">
+                            <table>
+                                <tr>
+                                    <th>品名</th>
+                                    <td>西施</td>
+                                </tr>
+                                <tr>
+                                    <th>價格</th>
+                                    <td>$50/公斤</td>
+                                </tr>
+                                <tr>
+                                    <th>規格</th>
+                                    <td>每個約 200 克</td>
+                                </tr>
+                                <tr>
+                                    <th>庫存狀況</th>
+                                    <td>現貨充足</td>
+                                </tr>
+                                <tr>
+                                    <th>保存方法</th>
+                                    <td>請放置於陰涼乾燥處，避免陽光直射。</td>
+                                </tr>
+                                <tr>
+                                    <th>運送信息</th>
+                                    <td>配送範圍：全台灣；配送方式：宅配；配送時間：1-3 個工作日內。</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="order-form">
+                            <form action="/submit-order" method="post" aria-labelledby="order-form">
+                                <input type="number" name="quantity" min="1" max="10" value="1" aria-label="選擇數量">
+                                <button type="submit" class="btn-custom">立即訂購</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <!-- 其他商品區塊 -->
+            <!-- 使用相同的結構，僅更改圖片來源和商品信息 -->
+        </div>
+    </div>
+    <footer>
+        <p>&copy; ★龍★職人農作 | 所有權利保留 | <a href="A06.html" title="隱私政策" target="_blank">隱私政策</a></p>
+    </footer>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>★龍★職人農作</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-image: url('images/dm.jpg'); /* 背景圖片 */
+            background-size: cover; /* 背景圖片覆蓋整個頁面 */
+            background-position: center;  /*背景圖片居中顯示 */
+            background-repeat: no-repeat; /* 避免背景圖片重複 */
+            margin: 0; /* 移除頁面邊距 */
+            background-attachment: fixed;
+            padding-top: 5px; /* 在上邊距添加5px的內部邊距 */
+        }
+        
+        .marquee {
+            width: 100%; /* 設定跑馬燈容器的寬度為 100% 頁面寬度 */
+            overflow: hidden; /* 隱藏超出容器範圍的內容，這樣跑馬燈的文本只會顯示在容器內部 */
+            background: #cce208; /* 設置容器的背景顏色為淺灰色（近似白色），可以提升對比度 */
+            color: #2111fc; /* 設置文本顏色為深灰色，以提高可讀性 */
+            white-space: nowrap; /* 禁止文本換行，確保文本在同一行顯示 */
+            box-shadow: 0 2px 4px rgba(17, 17, 17, 0.1); /* 添加盒子陰影，陰影顏色為淺綠色，透明度為 0.1，陰影偏移量為 0px 水平和 2px 垂直，模糊半徑為 4px */
+            position: relative; /* 設置定位為相對定位，使得內部的絕對定位元素相對於此容器進行定位 */
+            height: 40px; /* 設置跑馬燈容器的高度為 30px，以確保內容顯示在容器內 */
+        }
+        
+        .marquee-content {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 15s linear infinite; /* 修改這裡的時間來改變速度 */
+        }
+        
+        @keyframes marquee {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="marquee">
+        <div class="marquee-content">
+            <h3>~歡迎來到★龍★職人農作！我們提供最新鮮的農產品，敬請關注我們的產品動態與最新優惠活動！~</h3>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-light bg-light navbar-expand-md">
+        <!-- 定義一個導航欄，使用了 Bootstrap 的 navbar 類別，並且設置為輕色主題和響應式擴展功能 -->
+        <div class="container-fluid" style="background-color: rgb(255, 255, 235);">
+            <!-- 設置容器背景顏色為淡黃色 -->
+            <a class="navbar-brand" href="index.html">
+                <!-- 定義導航欄品牌標誌，並將其設為可點擊的連結(就是回首頁) -->
+                <img src="images/酪梨.jpg" width="60px" alt="品牌標誌" />
+                <!-- 在品牌標誌旁顯示一個圖片，設定寬度為 60px -->
+                ★龍★職人農作
+                <!-- 品牌名稱文字 -->
+            </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_1"
+                aria-controls="navbar_1" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- 定義切換按鈕，用於在小螢幕上顯示或隱藏導航欄 -->
+            <span class="navbar-toggler-icon"></span>
+                <!-- 切換按鈕上的圖示 -->
+        </button>
+        <div class="collapse navbar-collapse" id="navbar_1">
+            <!-- 定義可折疊的導航內容，當按下切換按鈕時會顯示或隱藏 -->
+            <ul class="navbar-nav me-auto">
+                <!-- 定義導航列表，並設置為靠左對齊 -->
+                <li class="nav-item dropdown">
+                    <!-- 定義一個下拉式菜單 -->
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">關於我們</a>
+                        <!-- 菜單標題，點擊時會顯示下拉選單 -->
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <!-- 定義下拉選單的內容 -->
+                        <li><a class="dropdown-item" href="A011.html">職人理念</a></li>
+                        <!-- 下拉選單項目，鏈接文字為「職人理念」 -->
+                        <li><a class="dropdown-item" href="A012.html">職人故事</a></li>
+                        <li><a class="dropdown-item" href="A013.html">施作方式</a></li>
+                        <li><a class="dropdown-item" href="A014.html">友善環境</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">職人嚴選</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="A021.html">加林一號(菜寮種)</a></li>
+                        <li><a class="dropdown-item" href="A022.html">嘉選四號</a></li>
+                        <li><a class="dropdown-item" href="A023.html">清進一號(黑美人)</a></li>
+                        <li><a class="dropdown-item" href="A024.html">清進二號(紅心圓)</a></li>
+                        <li><a class="dropdown-item" href="A025.html">厚兒</a></li>
+                        <li><a class="dropdown-item" href="A026.html">秋可得</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="A03.html" class="nav-link">商品訂購</a></li>
+                    <!-- 第四個導航項目，鏈接文字為「商品訂購」 -->
+                <li class="nav-item"><a href="#" class="nav-link">會員登入</a></li>
+                    <!-- 第五個導航項目，鏈接文字為「會員登入」 -->
+                <li class="nav-item"><a href="A05.html" class="nav-link">聯繫我們</a></li>
+                    <!-- 第六個導航項目，鏈接文字為「聯繫我們」 -->
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="商品搜尋" />
+                <button class="btn btn-outline-success">Search</button>
+            </form>
+        </div>
+        </div>
+    </nav>
+    
+    <footer class="container mt-4">
+        <div class="row">
+            <div class="col">
+                <p>&copy; 2024 ★龍★職人農作 | 所有權利保留 | <a href="A06.html" title="隱私政策">隱私政策</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

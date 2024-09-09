@@ -1,0 +1,210 @@
+/* styles.css */
+
+/* 基本樣式設置 */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: url('images/dm.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Header 和導航樣式 */
+header {
+    color: #f6ff00; /* 文字顏色為 lime */
+    padding: 0.5rem; /* 內邊距為 1rem */
+    font-size: 2rem; /* 設定字體大小為 2rem */
+    font-family: 'Dancing Script', cursive; /* 使用 Google Fonts 的 Dancing Script 字體 */
+}
+
+header h1 {
+    font-size: 2rem; /* 更大標題字體 */
+}
+header nav a {
+    font-size: 2rem; /* 導航連結字體 */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 15px; /* 設定導航連結的左右間距 */
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit; /* 使用父元素的顏色 */
+    font-size: 1.2rem; /* 基本字體大小 */
+    padding: 10px 20px; /* 內邊距 */
+    display: inline-block;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.3); /* 懸停效果 */
+    border-radius: 5px;
+}
+
+
+/* 主要內容區域 */
+main {
+    padding: 0.5rem; /* 內邊距為 1rem */
+    font-size: 1.5rem; /* 設定字體大小為 2rem */
+    font-family: 'URW Chancery L', cursive; /* 使用 Google Fonts 的 Dancing Script 字體 */
+}
+
+.hero {
+    background: rgba(0, 0, 0, 0.1); /* 半透明的黑色背景 */
+    color: #00FF00; /* 文字顏色為 Lime */
+    text-align: center;
+    padding: 2rem; /* 增加內邊距以增強視覺效果 */
+    font-family: 'Dancing Script', cursive; /* 美化字體，使用 Google Fonts */
+}
+
+.hero .image-content {
+    text-align: center; /* 圖片居中 */
+    margin-bottom: 1rem; /* 在圖片和下方文本之間添加間距 */
+}
+
+.hero .image-content img {
+    max-width: 5%; /* 設置圖片最大寬度為容器的80% */
+    height: auto; /* 保持圖片比例 */
+    border-radius: 8px; /* 添加圓角邊框 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 添加陰影效果 */
+}
+
+
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem; /* 增加內邊距 */
+}
+
+.text-content, .image-content {
+    flex: 1;
+}
+
+.image-content img {
+    width: 50%; /* 確保圖片自適應寬度 */
+    height: auto; /* 保持圖片比例 */
+    border-radius: 8px; /* 圓角邊框 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* 增加陰影效果 */
+}
+
+
+/* 分業區域 */
+.business-units {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.business-units ul {
+    list-style: none;
+    padding: 0;
+}
+
+.business-units li {
+    margin: 1rem 0;
+}
+
+.business-units a {
+    text-decoration: none;
+    color: #00FF00; /* 使用 Lime 顏色 */
+    font-size: 1.5rem;
+    transition: color 0.3s ease; /* 平滑過渡效果 */
+}
+
+.business-units a:hover {
+    color: #007bff; /* 懸停顏色 */
+}
+
+.tooltip-inner {
+    max-width: 300px; /* 設置工具提示的最大寬度 */
+}
+.tooltip-img {
+    max-width: 100%; /* 確保圖片不超過工具提示的寬度 */
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: #41f30a;
+}
+
+/* 媒體查詢 */
+
+/* 平板和小屏幕設備 */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
+
+    .hero .image-content img {
+        max-width: 100%; /* 在小屏幕上圖片最大寬度設置為100% */
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .text-content, .image-content {
+        flex: none;
+        margin-bottom: 1rem;
+    }
+
+    .business-units a {
+        font-size: 1rem;
+    }
+}
+
+/* 手機設備 */
+@media (max-width: 480px) {
+    nav a {
+        font-size: 1rem; /* 更小的字體大小 */
+        padding: 8px 16px;
+    }
+
+    .hero .image-content img {
+        max-width: 90%; /* 在更小屏幕上圖片最大寬度設置為90% */
+    }
+
+    .hero h1 {
+        font-size: 1.5rem; /* 更小的標題字體 */
+    }
+
+    .content {
+        padding: 1rem;
+    }
+
+    .text-content, .image-content {
+        margin-bottom: 0.5rem;
+    }
+
+    .business-units a {
+        font-size: 0.9rem; /* 更小的字體大小 */
+    }
+}
+
+
+
+
+

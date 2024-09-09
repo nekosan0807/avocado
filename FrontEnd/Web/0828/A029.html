@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>火龍果</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    
+    <!-- 引入自定義 CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- 引入 jQuery (更新版本) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    
+    <!-- 引入 Bootstrap Bundle (包含 Popper) -->
+    <script src="./js/bootstrap.bundle.min.js" defer></script>
+    <link rel="stylesheet" href="styles.css"> <!-- 新的樣式文件 -->
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <!-- 載入 navbar -->
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+    </script>
+    <div class="container">
+        <h1>火龍果-鮮甜美味的健康選擇</h1>
+        <div class="row">
+            <!-- 商品項目開始 -->
+            <div class="col-md-12 mb-4">
+                <div class="card d-flex flex-row">
+                    <img src="images/紅肉火龍果.jpg" class="card-img-left" alt="紅肉火龍果" style="max-width: 40%; height: auto;">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div class="product-table">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th>產品名稱</th>
+                                    <td>紅肉火龍果</td>
+                                </tr>
+                                <tr>
+                                    <th>產品介紹</th>
+                                    <td>紅皮紫紅色肉火龍果，又名龍珠果或仙人掌果，是一種源自中美洲的熱帶水果。這種果實因其獨特的外形和鮮豔的顏色而受到喜愛，外觀如同火焰般耀眼，而內裡則蘊藏著令人驚艷的美味。</br>
+                                        火龍果被譽為水果中的瑰寶，其橄欖狀的果形，鮮紅色的外皮既艷麗又奪目，每顆果實重約500至1200克。果肉甜而不膩，清淡中帶有一絲芬芳。</br>
+                                        火龍果富含豐富的纖維、胡蘿蔔素，以及維他命B1、B2、B6、B12、C和鈣等營養素。根據果形的不同，火龍果有長形和圓球形之分，果皮上的鱗片也有長短之別。</td>
+                                </tr>
+                                <tr>
+                                    <th>產期</th>
+                                    <td>6-11月</td>
+                                </tr>
+                                <tr>
+                                    <th>主要特點</th>
+                                    <td>◆鮮豔色彩: 火龍果外皮呈現鮮紅或黃色，搭配綠色的葉片，讓人一見難忘。</br>
+                                        ◆豐富營養: 火龍果富含維生素C、纖維素和抗氧化劑，有助於促進免疫系統健康、改善消化功能，並且有助於抗老化。</br>
+                                        ◆清爽口感: 果肉柔嫩多汁，帶有微微的甜味，適合用來做沙拉、果汁或直接食用。</br>
+                                        ◆低熱量: 每100克火龍果僅含約60卡路里，是減肥或維持健康飲食的理想選擇。</td>
+                                </tr>
+                                <tr>
+                                    <th>如何挑選</th>
+                                    <td>●用手感覺重量，越重代表汁多而且果肉豐滿。</br>
+                                        ●外表選擇果皮轉色均勻、果萼端完全轉色。</br>
+                                        ●肉質鱗片軟化反捲或是轉紅達一半以上。</br>
+                                        ●無擦壓傷、裂果，果梗切口無腐爛。</td>
+                                </tr>
+                                <tr>
+                                    <th>保存方法</th>
+                                    <td>請將火龍果存放於陰涼乾燥的地方，避免陽光直射。若需延長保存期限，可將其放入冰箱冷藏室中，並在3-5天內食用完畢，以保持最佳鮮度和風味。</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-4">
+                <div class="card d-flex flex-row">
+                    <img src="images/白肉火龍果001.jpg" class="card-img-left" alt="白肉火龍果" style="max-width: 40%; height: auto;">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div class="product-table">
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th>產品名稱</th>
+                                    <td>白肉火龍果</td>
+                                </tr>
+                                <tr>
+                                    <th>產品介紹</th>
+                                    <td>白肉火龍果，又名龍珠果或仙人掌果，是一種源自中美洲的熱帶水果。這種果實因其獨特的外形和鮮豔的顏色而受到喜愛，外觀如同火焰般耀眼，而內裡則蘊藏著令人驚艷的美味。</br>
+                                        火龍果被譽為水果中的瑰寶，其橄欖狀的果形，鮮紅色的外皮既艷麗又奪目，每顆果實重約500至1200克。果肉甜而不膩，清淡中帶有一絲芬芳。</br>
+                                        火龍果富含豐富的纖維、胡蘿蔔素，以及維他命B1、B2、B6、B12、C和鈣等營養素。根據果形的不同，火龍果有長形和圓球形之分，果皮上的鱗片也有長短之別。</td>
+                                </tr>
+                                <tr>
+                                    <th>產期</th>
+                                    <td>6-11月</td>
+                                </tr>
+                                <tr>
+                                    <th>主要特點</th>
+                                    <td>◆鮮豔色彩: 火龍果外皮呈現鮮紅或黃色，搭配綠色的葉片，讓人一見難忘。</br>
+                                        ◆豐富營養: 火龍果富含維生素C、纖維素和抗氧化劑，有助於促進免疫系統健康、改善消化功能，並且有助於抗老化。</br>
+                                        ◆清爽口感: 果肉柔嫩多汁，帶有微微的甜味，適合用來做沙拉、果汁或直接食用。</br>
+                                        ◆低熱量: 每100克火龍果僅含約60卡路里，是減肥或維持健康飲食的理想選擇。</td>
+                                </tr>
+                                <tr>
+                                    <th>如何挑選</th>
+                                    <td>●用手感覺重量，越重代表汁多而且果肉豐滿。</br>
+                                        ●外表選擇果皮轉色均勻、果萼端完全轉色。</br>
+                                        ●肉質鱗片軟化反捲或是轉紅達一半以上。</br>
+                                        ●無擦壓傷、裂果，果梗切口無腐爛。</td>
+                                </tr>
+                                <tr>
+                                    <th>保存方法</th>
+                                    <td>請將火龍果存放於陰涼乾燥的地方，避免陽光直射。若需延長保存期限，可將其放入冰箱冷藏室中，並在3-5天內食用完畢，以保持最佳鮮度和風味。</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 重複商品區塊 -->
+            <!-- 其他商品區塊 -->
+            <!-- 使用相同的結構，僅更改圖片來源和商品信息 -->
+        </div>
+    </div>
+    <footer>
+        <p>&copy; ★龍★職人農作 | 所有權利保留 | <a href="A06.html" title="隱私政策" target="_blank">隱私政策</a></p>
+    </footer>
+</body>
+</html>
+
+
+
+
+

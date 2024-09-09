@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品訂購</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+    
+    <!-- 引入自定義 CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- 引入 jQuery (更新版本) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- 引入 Bootstrap Bundle (包含 Popper) -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .product {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .product img {
+            max-width: 150px;
+            border-radius: 8px;
+            object-fit: cover; /* 保持圖片比例 */
+        }
+        .product-details {
+            flex: 1;
+            margin-left: 20px;
+        }
+        .product-details h2 {
+            margin: 0;
+        }
+        .product-details p {
+            margin: 10px 0;
+        }
+        .order-form {
+            text-align: center;
+        }
+        .order-form input[type="number"] {
+            width: 60px;
+            text-align: center;
+        }
+        .order-form button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #28a745;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .order-form button:hover {
+            background-color: #218838;
+        }
+        .btn-custom {
+            background-color: #e1fa05;
+            border-color: #e1fa05;
+            color: #fd0606;
+            font-family: 'Dancing Script', cursive;
+        }
+        .btn-custom:hover {
+            background-color: #d4e5a3;
+            border-color: #d4e5a3;
+            color: #000000;
+        }
+        footer {
+            background-color: #f8f9fa;
+            padding: 10px 0;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <!-- 載入 navbar -->
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+    </script>
+    <div class="container">
+        <h1>商品訂購</h1>
+        <div class="product">
+            <img src="images/加林1號.jpg" alt="加林一號(菜寮種)">
+            <div class="product-details">
+                <h2>加林一號(菜寮種)</h2>
+                <p>商品描述：這是一個示範商品的簡短描述。這裡可以加入更多關於商品的詳細信息。</p>
+                <p>價格：$100</p>
+            </div>
+        </div>
+        <div class="order-form">
+            <h3>選擇數量</h3>
+            <form action="/submit-order" method="post" aria-labelledby="order-form">
+                <input type="number" name="quantity" min="1" max="10" value="1" aria-label="選擇數量">
+                <button type="submit" class="btn-custom">立即訂購</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; ★龍★職人農作 | 所有權利保留 | <a href="A06.html" title="隱私政策" target="_blank">隱私政策</a></p>
+    </footer>
+</body>
+</html>

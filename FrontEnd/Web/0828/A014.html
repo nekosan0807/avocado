@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯繫我們</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+    
+    <!-- 引入自定義 CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- 引入 jQuery (更新版本) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- 引入 Bootstrap Bundle (包含 Popper) -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <style>
+        .card-container {
+            display: flex;
+            align-items: center;
+            background-color: #e6f9e6; /* 淺綠色底色 */
+            padding: 1rem; /* 添加一些內邊距 */
+            border-radius: 8px; /* 圓角邊框 (可選) */
+        }
+        .card-img {
+            width: 60%;
+            height: auto;
+        }
+        .card-body {
+            width: 40%;
+            padding-left: 1rem;
+        }
+        footer {
+            background-color: #f8f9fa;
+            padding: 10px 0;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <!-- 載入 navbar -->
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+    </script>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                <div class="card-container">
+                    <img src="images/友善環境.jpg" class="card-img" alt="友善環境">
+                    <div class="card-body">
+                        <h2 class="card-title">友善環境</h2>
+                        <hr class="my-3" style="border: none; height: 4px; background-color: #36fa05;">
+                        <p class="card-text">在果樹生產管理方面，龍哥秉持「與土地互相尊重」的理念，堅持友善環境的草生栽培，亦即讓園區內的雜草生長，或種植綠肥作物、非原生草類等；且以人工割草，割下的草就留在原地當作肥料。草生栽培的方式，有利於土壤孔隙疏鬆，透氣良好，保水性更佳，更能促進根系生長，讓果園保持自然生態平衡。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; ★龍★職人農作 | 所有權利保留 | <a href="A06.html" title="隱私政策">隱私政策</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯繫我們</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+    
+    <!-- 引入自定義 CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- 引入 jQuery (更新版本) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- 引入 Bootstrap Bundle (包含 Popper) -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <style>
+        .card-container {
+            display: flex;
+            align-items: center;
+            background-color: #e6f9e6; /* 淺綠色底色 */
+            padding: 1rem; /* 添加一些內邊距 */
+            border-radius: 8px; /* 圓角邊框 (可選) */
+        }
+        .card-img {
+            width: 60%;
+            height: auto;
+        }
+        .card-body {
+            width: 40%;
+            padding-left: 1rem;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            font-family: Arial, sans-serif;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+            font-family: 'Dancing Script', cursive;
+        }
+        .tooltip-inner {
+            max-width: 350px; /* 設置工具提示的最大寬度 */
+            /* white-space: pre-wrap; /* 保持空白符號和換行符號 */
+            text-align: left; /* 確保文字靠左對齊 */
+            word-wrap: break-word; /* 確保長單詞在達到邊界時換行 */
+        }
+        .tooltip-img {
+            width: 300px; /* 確保圖片寬度合適 */
+            height: auto;
+        }
+        .btn-custom {
+            background-color: #e1fa05;
+            border-color: #e1fa05;
+            color: #fd0606;
+            font-family: 'Dancing Script', cursive;
+        }
+        .btn-custom:hover {
+            background-color: #d4e5a3;
+            border-color: #d4e5a3;
+            color: #000000;
+        }
+        footer {
+            background-color: #f8f9fa;
+            padding: 10px 0;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <!-- 載入 navbar -->
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+    </script>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                <div class="card-container">
+                    <img src="images/秋可得.jpg" class="card-img" alt="秋可得">
+                    <div class="card-body">
+                        <h2 class="card-title">秋可得</h2>
+                        <hr class="my-3" style="border: none; height: 4px; background-color: #36fa05;">
+                        <p class="card-text">秋可得的產期為12月～隔年2月，外觀呈現蛋形，初期表皮亮綠，後熟會轉為暗綠色或淡綠。果肉厚且色澤黃，質地絲滑味道溫和，脂肪含量約8-13%。與厚兒相同，都是後熟不會轉黑的酪梨，要判斷可不可以食用，只要用手指輕壓、不會彈回，就可以吃囉，別苦苦等待果皮轉黑，放太久會過熟爛掉。</p>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between mt-3">
+                    <a href="#" class="btn btn-primary btn-sm" 
+                        data-bs-toggle="tooltip" 
+                        data-bs-placement="left" 
+                        data-bs-html="true" 
+                        title="
+                        <!-- 工具提示內容開始 -->
+                        <div>
+                            <strong>保存期限：</strong>
+                            <ul>
+                                <li>已經軟的酪梨，建議馬上食用或放入塑膠袋內密封儲放在冰箱冷藏，大約可儲藏 3~4 天。</li>
+                                <li>硬的酪梨別放入冰箱，否則無法後熟，放置室溫待果實轉為更軟，再食用或冷藏。</li>
+                                <li>判斷酪梨成熟了沒，最準確的方法還是用拇指按壓，摸起來軟軟的、壓下不會彈起，表示已經可以切開享用囉！</li>
+                            </ul>
+                            <strong>食用方法：</strong>
+                            <ul>
+                                <li>切塊後沾蒜蓉醬油、芥末直接吃；生菜沙拉、三明治、壽司捲等；沾醬、抹醬；牛奶、蜂蜜打成飲料。</li>
+                            </ul>
+                            <strong>注意事項：</strong>
+                            <ol>
+                                <li>酪梨還沒變軟前，不能放冰箱，以免低溫造成無法後熟。</li>
+                                <li>變軟後馬上食用。</li>
+                                <li>比較硬的要放在室溫下 4～10 天後熟，等果肉變軟再吃。</li>
+                                <li>切開吃不完時，則去籽並在切面上抹檸檬汁，避免接觸空氣氧化變黑，再裝入密封袋冷藏。</li>
+                                <li>如果要延長食用期，可以放冷凍庫，要吃前再解凍，不過果肉質地可能改變，較適合打果汁。</li>
+                            </ol>
+                        </div>
+                        ">相關資訊</a>
+                    <a href="#" class="btn btn-secondary btn-sm" 
+                       data-bs-toggle="tooltip" 
+                       data-bs-placement="top" 
+                       data-bs-html="true" 
+                       title="<img src='images/加林一號成熟圖.jpg' class='tooltip-img' alt='成熟變色圖'/>">
+                       成熟變色圖
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; ★龍★職人農作 | 所有權利保留 | <a href="A06.html" title="隱私政策">隱私政策</a></p>
+    </footer>
+
+    <!-- 初始化 Bootstrap 工具提示 -->
+    <script>
+        document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(function (element) {
+            new bootstrap.Tooltip(element);
+        });
+    </script>
+</body>
+</html>

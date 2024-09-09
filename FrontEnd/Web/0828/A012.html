@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯繫我們</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+    
+    <!-- 引入自定義 CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- 引入 jQuery (更新版本) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- 引入 Bootstrap Bundle (包含 Popper) -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <style>
+        .card-container {
+            display: flex;
+            align-items: center;
+            background-color: #e6f9e6; /* 淺綠色底色 */
+            padding: 1rem; /* 添加一些內邊距 */
+            border-radius: 8px; /* 圓角邊框 (可選) */
+        }
+        .card-img {
+            width: 50%;
+            height: auto;
+        }
+        .card-body {
+            width: 50%;
+            padding-left: 1rem;
+        }
+        footer {
+            background-color: #f8f9fa;
+            padding: 10px 0;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <!-- 載入 navbar -->
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+    </script>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                <div class="card-container">
+                    <img src="images/職人.jpg" class="card-img" alt="職人故事">
+                    <div class="card-body">
+                        <h5 class="card-title">職人故事</h5>
+                        <hr class="my-3" style="border: none; height: 4px; background-color: #36fa05;">
+                        <p class="card-text">龍哥在退休後回到家鄉，接手經營父輩所創立的酪梨果園，無疑是一個充滿情感與連結的決定。這片酪梨果園，不僅僅是他的生計來源，更是他童年的記憶與情感的寄託。從小吃著父親種的酪梨長大，這些樹木和土地對他來說，無疑充滿了深厚的感情。</p>
+                            <p class="card-text">果園面積約1.6公頃，其中種植的酪梨樹有不少已經超過了10年，甚至有一棵樹齡達20年以上。這些老樹不僅是農場的珍貴資產，也象徵著時間的沉澱與歷史的積累。對龍哥來說，這片果園不僅是農業生產的場所，更是一段珍貴的家族歷史的見證。每一顆酪梨，都是他對父親、對這片土地深厚情感的延續。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; ★龍★職人農作 | 所有權利保留 | <a href="A06.html" title="隱私政策">隱私政策</a></p>
+    </footer>
+</body>
+</html>

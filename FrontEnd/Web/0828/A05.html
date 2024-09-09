@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯繫我們</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+    
+    <!-- 引入自定義 CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- 引入 jQuery (更新版本) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- 引入 Bootstrap Bundle (包含 Popper) -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <style>
+        .btn-custom {
+            background-color: #e1fa05;
+            border-color: #e1fa05;
+            color: #fd0606;
+            font-family: 'Dancing Script', cursive;
+        }
+        .btn-custom:hover {
+            background-color: #d4e5a3;
+            border-color: #d4e5a3;
+            color: #000000;
+        }
+        footer {
+            background-color: #f8f9fa;
+            padding: 10px 0;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <script>
+        document.getElementById('navbar-container').innerHTML = '<!-- 這裡是載入的內容 -->';
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+    </script>
+    <div class="container">
+        <div class="contact-form">
+            <h2>聯繫我們</h2>
+            <p>如果您有任何問題或建議，請隨時聯繫我們。我們將盡快回覆您。</p>
+            <form action="#" method="post">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">姓名</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">電子郵件</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="phone" class="form-label">電話</label>
+                        <input type="tel" class="form-control" id="phone" name="phone">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="subject" class="form-label">主題</label>
+                        <input type="text" class="form-control" id="subject" name="subject">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">留言</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-custom">發送留言</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; ★龍★職人農作 | 所有權利保留 | <a href="A06.html" title="隱私政策">隱私政策</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯繫我們</title>
+    <!-- 引入 Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+    
+    <!-- 引入自定義 CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- 引入 jQuery (更新版本) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- 引入 Bootstrap Bundle (包含 Popper) -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <style>
+        .card-container {
+            display: flex;
+            align-items: center;
+            background-color: #e6f9e6; /* 淺綠色底色 */
+            padding: 1rem; /* 添加一些內邊距 */
+            border-radius: 8px; /* 圓角邊框 (可選) */
+        }
+        .card-img {
+            width: 50%;
+            height: auto;
+        }
+        .card-body {
+            width: 50%;
+            padding-left: 1rem;
+        }
+        footer {
+            background-color: #f8f9fa;
+            padding: 10px 0;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <!-- 載入 navbar -->
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+    </script>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                <div class="card-container">
+                    <img src="images/阿楷.jpg" class="card-img" alt="職人理念">
+                    <div class="card-body">
+                        <h5 class="card-title">職人理念</h5>
+                        <hr class="my-3" style="border: none; height: 4px; background-color: #36fa05;">
+                        <p class="card-text">龍哥堅持採用無農藥或減少農藥的耕作方式。對於無農藥耕作，我們的認可標準包括有機認證或零殘留報告。對於減少農藥的標準，我們要求農藥殘留量低於衛福部公告的合法殘留量的十分之一，且藥物種類不超過三種。對於受極端氣候影響或管理難度較高的果蔬，我們的標準為衛福部公告合法殘留量的三分之一以下，藥物種類不超過四種，並會特別說明。鼓勵大家選擇全食、當季、本土和純味的食材。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; ★龍★職人農作 | 所有權利保留 | <a href="A06.html" title="隱私政策">隱私政策</a></p>
+    </footer>
+</body>
+</html>
